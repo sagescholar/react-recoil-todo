@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# React-Recoil Todoアプリ チュートリアル
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 概要
 
-## Available Scripts
+このプロジェクトは、ReactとRecoilを使用して簡単なTodoアプリケーションを構築するハンズオンチュートリアルです。初心者向けに設計されており、ReactとRecoilの基本的な概念を学ぶことができます。
 
-In the project directory, you can run:
+## 前提条件
 
-### `npm start`
+- Node.js（バージョン12以上）がインストールされていること
+- npm（Node Package Manager）の基本的な知識
+- Reactの基本的な理解
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## セットアップ
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. リポジトリをクローンするか、プロジェクトファイルをダウンロードします。
 
-### `npm test`
+2. プロジェクトディレクトリに移動します：
+   ```
+   cd react-recoil-todo
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. 依存関係をインストールします：
+   ```
+   npm install
+   ```
 
-### `npm run build`
+4. アプリケーションを起動します：
+   ```
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. ブラウザで `http://localhost:3000` を開いてアプリケーションを確認します。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## プロジェクト構造
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+react-recoil-todo/
+├── src/
+│   ├── atoms.js
+│   ├── Todo.js
+│   ├── TodoList.js
+│   └── App.js
+├── package.json
+└── README.md
+```
 
-### `npm run eject`
+## 主要コンポーネント
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. `atoms.js`: Recoilの状態（atom）を定義
+2. `Todo.js`: 個々のTodoアイテムを表示するコンポーネント
+3. `TodoList.js`: Todoリスト全体を管理するコンポーネント
+4. `App.js`: アプリケーションのメインコンポーネント
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 学習ポイント
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Recoilを使用した状態管理の基本
+2. Reactコンポーネントの作成と構造化
+3. Recoilの状態をコンポーネント間で共有する方法
+4. 簡単なTodoアプリの機能実装（追加、完了状態の切り替え）
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 追加の学習リソース
 
-## Learn More
+- [React 公式ドキュメント](https://reactjs.org/docs/getting-started.html)
+- [Recoil 公式ドキュメント](https://recoiljs.org/docs/introduction/getting-started)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## トラブルシューティング
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+問題が発生した場合は、以下を確認してください：
 
-### Code Splitting
+1. Node.jsとnpmが最新バージョンであることを確認
+2. `npm install` コマンドを再実行して依存関係を再インストール
+3. `npm start` コマンドを使用してアプリケーションを再起動
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## コントリビューション
 
-### Analyzing the Bundle Size
+このプロジェクトへの貢献を歓迎します。問題を報告したり、改善の提案をしたりする場合は、Issueを作成してください。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ライセンス
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+このプロジェクトはMITライセンスの下で公開されています。詳細については、[LICENSE](LICENSE) ファイルを参照してください。
