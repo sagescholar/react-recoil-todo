@@ -13,15 +13,23 @@ function Todo({ item }) {
   };
 
   return (
-    <li>
-      <input
-        type="checkbox"
-        checked={item.completed}
-        onChange={toggleTodo}
-      />
-      <span style={{ textDecoration: item.completed ? 'line-through' : 'none' }}>
-        {item.text}
-      </span>
+    <li className="slds-item">
+      <div className="slds-form-element">
+        <div className="slds-form-element__control">
+          <div className="slds-checkbox">
+            <input
+              type="checkbox"
+              id={`checkbox-${item.id}`}
+              checked={item.completed}
+              onChange={toggleTodo}
+            />
+            <label className="slds-checkbox__label" htmlFor={`checkbox-${item.id}`}>
+              <span className="slds-checkbox_faux"></span>
+              <span className="slds-form-element__label">{item.text}</span>
+            </label>
+          </div>
+        </div>
+      </div>
     </li>
   );
 }

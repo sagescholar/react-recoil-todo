@@ -15,16 +15,23 @@ function TodoList() {
   };
 
   return (
-    <div>
-      <h1>Todo List</h1>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Add a new todo"
-      />
-      <button onClick={addTodo}>Add</button>
-      <ul>
+    <div className="slds-p-around_medium">
+      <h1 className="slds-text-heading_large slds-m-bottom_medium">Todo List</h1>
+      <div className="slds-form-element slds-m-bottom_medium">
+        <div className="slds-form-element__control">
+          <input
+            className="slds-input"
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Add a new todo"
+          />
+        </div>
+      </div>
+      <button className="slds-button slds-button_brand" onClick={addTodo}>
+        Add Todo
+      </button>
+      <ul className="slds-has-dividers_around-space slds-m-top_medium">
         {todoList.map((item) => (
           <Todo key={item.id} item={item} />
         ))}

@@ -5,7 +5,9 @@ import TodoList from './TodoList';
 function App() {
   return (
     <RecoilRoot>
-      <TodoList />
+      <div className="slds-container_center slds-container_medium">
+        <TodoList />
+      </div>
     </RecoilRoot>
   );
 }
